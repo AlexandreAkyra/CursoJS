@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 1em Arial;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: white;
+        }
+
+        section {
+            height: 400px;
+            width: 600px;
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.226);
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 0px 0px 0px 150px;
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        footer {
+            color: white;
+            font-size: 1.3em;
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div>
+            <h2 id="frase"></h2>
+        </div>
+        <div>
+            <p id="imagem"></p>
+        </div>
+    </section>
+    <footer>
+        @ CursoemVideo
+    </footer>
+
+    <script>
+        var agora = new Date()
+        var hora_atual = agora.getHours()
+        var frase = document.getElementById('frase')
+        var imagem = document.getElementById('imagem')
+
+        frase.innerText = `Agora são ${hora_atual} horas`
+
+        if (hora_atual < 12) {
+            document.body.style.background = 'rgb(224, 224, 104)'
+            imagem.innerHTML = '<img src="imagens/morning.jpg" alt="manha">'
+        } else if (hora_atual <= 18) {
+            document.body.style.background = 'rgb(201, 138, 80)'
+            imagem.innerHTML = '<img src="imagens/afternoon.jpg" alt="manha">'
+        } else {
+            document.body.style.background = 'rgb(80, 80, 80)'
+            imagem.innerHTML = '<img src="imagens/night.jpg" alt="manha">'
+        }
+    </script>
+</body>
+</html>
