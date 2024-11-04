@@ -1,7 +1,9 @@
 console.log('Vai começar...')
-
-for(let i = 1; i <= 6; i++) {
-    console.log(i)
+var inicio = 1
+var fim = 10
+var passo = 2
+while (inicio <= fim) {
+    console.log(inicio)
+    inicio += passo
 }
-
 console.log('Fim')
